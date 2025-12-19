@@ -5,10 +5,10 @@
 #' Calculate the Reynolds number for a fluid flowing in a pipe
 #' and determine its flow regime.
 #'
-#' @param rho density of the fluid
-#' @param V flow velocity
-#' @param L caracteristique length
-#' @param nu dynamic viscosity
+#' @param rho density of the fluid (kg/m3)
+#' @param V flow velocity (m/s)
+#' @param D Pipe diameter (m)
+#' @param nu dynamic viscosity (Pa.s)
 #'
 #' @returns The value of the Reynolds number
 #' @examples
@@ -17,7 +17,7 @@
 #' Turbulent flow
 #' 20000
 
-Re <- function(rho,V,L,nu){
+Re <- function(rho,V,D,nu){
   if(is.numeric(rho)==FALSE || rho<=0 || length(rho)!=1){
     stop("The density 'rho'
          must be a strictly positive number!")
@@ -26,15 +26,15 @@ Re <- function(rho,V,L,nu){
     stop(" The fluid velocity 'V'
          must be a strictly positive number !")
   }
-  if(is.numeric(L)==FALSE || L<=0 || length(L)!=1){
-    stop("The caracteristic length 'L'
+  if(is.numeric(D)==FALSE || D<=0 || length(D)!=1){
+    stop("The Pipe diameter 'D'
          must be a strictly positive number !")
   }
   if(is.numeric(nu)==FALSE || nu<=0 || length(nu)!=1){
     stop("The dynamic viscosity 'nu'
          must be a strictly positive number !")
   }
-  Re <- (rho*V*L)/nu
+  Re <- (rho*V*D)/nu
   if(Re<=2500){
     print("Laminar flow")
   }else if(Re>=4000){

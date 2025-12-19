@@ -7,13 +7,13 @@
 Re_Q(rho, Q, nu, D)
 }
 \arguments{
-\item{rho}{density of the fluid}
+\item{rho}{density of the fluid (kg/m3)}
 
-\item{Q}{volumetric flow rate}
+\item{Q}{volumetric flow rate (m3/s)}
 
-\item{nu}{dynamic viscosity}
+\item{nu}{dynamic viscosity (Pa.s)}
 
-\item{D}{pipe diameter}
+\item{D}{pipe diameter (m)}
 }
 \value{
 The value of the Reynolds number

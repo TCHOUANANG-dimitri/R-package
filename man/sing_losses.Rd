@@ -4,12 +4,14 @@
 \alias{sing_losses}
 \title{Singular pressure losses}
 \usage{
-sing_losses(K, V)
+sing_losses(K, V, rho)
 }
 \arguments{
 \item{K}{singular loss coefficient}
 
-\item{V}{flow velocity in  the pipe}
+\item{V}{flow velocity in  the pipe (m/s)}
+
+\item{rho}{density of the fluid (kg/m3)}
 }
 \value{
 Singular pressure losses
@@ -19,7 +21,7 @@ Singular head losses in pipe fittings
 }
 \examples{
 
-sing_losses(0.4,10)
+sing_losses(0.4,10,1000)
 196.2
 
 }

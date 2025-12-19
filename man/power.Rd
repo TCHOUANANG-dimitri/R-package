@@ -4,16 +4,12 @@
 \alias{power}
 \title{Pump power}
 \usage{
-power(rho, Q, HMT, nu)
+power(Q, HMT)
 }
 \arguments{
-\item{rho}{density of the fluid}
+\item{Q}{volumetric flow rate (m3/s)}
 
-\item{Q}{volumetric flow rate}
-
-\item{HMT}{Overall pressure losses}
-
-\item{nu}{dynamic viscosity}
+\item{HMT}{Overall pressure losses (m)}
 }
 \value{
 the pomp power

@@ -5,10 +5,10 @@
 #' Calculate the Reynolds number for a fluid flowing in a pipe
 #' using volumetric flow rate Q.
 #'
-#' @param rho density of the fluid
-#' @param Q volumetric flow rate
-#' @param nu dynamic viscosity
-#' @param D pipe diameter
+#' @param rho density of the fluid (kg/m3)
+#' @param Q volumetric flow rate (m3/s)
+#' @param nu dynamic viscosity (Pa.s)
+#' @param D pipe diameter (m)
 #'
 #' @returns The value of the Reynolds number
 #'

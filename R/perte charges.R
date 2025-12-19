@@ -4,17 +4,20 @@
 #'calculate the linear charges losses by a fluid flowing in a pipe
 #'
 #'@param Re Reynolds number
-#'@param L pipe length
-#'@param D pipe diameter
-#'@param V flow velocity
+#'@param L pipe length (m)
+#'@param D pipe diameter (m)
+#'@param V flow velocity (m/s)
+#'@param rho density of the fluid (kg/m3)
 #'
 #'@returns Return the linear charges losses by the fluid
 #'
 #'@examples
-#'lin_losses(2000,10,0.020,5)
+#'lin_losses(2000,10,0.020,5,1000)
 #'20.38736
 
-lin_losses <- function(Re,L,D,V){
+lin_losses <- function(Re,L,D,V,rho){
+  if(is.numeric(rho)==FALSE || rho<=0 || length(rho)!=1)
+    stop("The density 'rho' must be a strictly positive number!")
   if(!is.numeric(Re)|| Re<=0||length(Re)!=1){
     stop("The Reynolds number 'Re' must be a strictly positive number !")
   }
@@ -29,8 +32,9 @@ lin_losses <- function(Re,L,D,V){
   }
 
     f <- f(Re)
-    Hf <- f*(L/D)*(V^2/(2*9.81))
-  return(Hf)
+    h <- f*(L/D)*(V^2/(19.62))
+    loss <- rho*9.81*h
+  return(loss)
 }
 
 

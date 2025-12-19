@@ -5,10 +5,10 @@
 #'fluid on the walls of a conduit.
 #'
 #'@param Re Reynolds number
-#'@param L pipe length
-#'@param D pipe diameter
-#'@param V fluid velocity
-#'@param rho density
+#'@param L pipe length (m)
+#'@param D pipe diameter (m)
+#'@param V fluid velocity (m/s)
+#'@param rho density (kg/m3)
 #'
 #'@return the shear stress value
 #'

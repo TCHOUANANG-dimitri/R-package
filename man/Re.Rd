@@ -4,16 +4,16 @@
 \alias{Re}
 \title{Reynolds number calculation}
 \usage{
-Re(rho, V, L, nu)
+Re(rho, V, D, nu)
 }
 \arguments{
-\item{rho}{density of the fluid}
+\item{rho}{density of the fluid (kg/m3)}
 
-\item{V}{flow velocity}
+\item{V}{flow velocity (m/s)}
 
-\item{L}{caracteristique length}
+\item{D}{Pipe diameter (m)}
 
-\item{nu}{dynamic viscosity}
+\item{nu}{dynamic viscosity (Pa.s)}
 }
 \value{
 The value of the Reynolds number

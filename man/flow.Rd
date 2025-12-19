@@ -9,11 +9,11 @@ flow(Re, rho, nu, D)
 \arguments{
 \item{Re}{Reynolds number}
 
-\item{rho}{fluid density}
+\item{rho}{fluid density (kg/m3)}
 
-\item{nu}{dynamic viscosity}
+\item{nu}{dynamic viscosity (Pa.s)}
 
-\item{D}{caracteristic length}
+\item{D}{caracteristic length (m)}
 }
 \value{
 The fluid flow

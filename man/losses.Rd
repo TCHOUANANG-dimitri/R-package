@@ -4,18 +4,20 @@
 \alias{losses}
 \title{Overall pressure losses}
 \usage{
-losses(Re, L, D, V, K)
+losses(Re, L, D, V, K, rho)
 }
 \arguments{
 \item{Re}{Reynolds number}
 
-\item{L}{pipe length}
+\item{L}{pipe length (m)}
 
-\item{D}{pipe diameter}
+\item{D}{pipe diameter (m)}
 
-\item{V}{fluid velocity}
+\item{V}{fluid velocity (m/s)}
 
 \item{K}{singular losses coefficient}
+
+\item{rho}{density of the fluid (kg/m3)}
 }
 \value{
 The overall pressure losses
@@ -25,7 +27,7 @@ Determine the overall pressure losses by summing the linear and singular losses
 }
 \examples{
 
-losses(3000,10,0.010,5,0.1)
+losses(3000,10,0.010,5,0.1,1000)
 Enter the roughness of the conduit: 0.2
 enter the pipe diameter: 0.010
 23.43854

@@ -4,16 +4,18 @@
 \alias{lin_losses}
 \title{Linear charge losses}
 \usage{
-lin_losses(Re, L, D, V)
+lin_losses(Re, L, D, V, rho)
 }
 \arguments{
 \item{Re}{Reynolds number}
 
-\item{L}{pipe length}
+\item{L}{pipe length (m)}
 
-\item{D}{pipe diameter}
+\item{D}{pipe diameter (m)}
 
-\item{V}{flow velocity}
+\item{V}{flow velocity (m/s)}
+
+\item{rho}{density of the fluid (kg/m3)}
 }
 \value{
 Return the linear charges losses by the fluid
@@ -22,6 +24,6 @@ Return the linear charges losses by the fluid
 calculate the linear charges losses by a fluid flowing in a pipe
 }
 \examples{
-lin_losses(2000,10,0.020,5)
+lin_losses(2000,10,0.020,5,1000)
 20.38736
 }

@@ -4,8 +4,8 @@
 #'@description
 #'Determine the ideal pipe diameter given the desired flow rate and velocity
 #'
-#'@param Q volumetric flow rate
-#'@param V fluid velocity
+#'@param Q volumetric flow rate (m3/s)
+#'@param V fluid velocity (m/s)
 #'
 #'@returns the diameter of the conduit through wich the fluid will flow
 #'

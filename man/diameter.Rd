@@ -7,9 +7,9 @@
 diameter(Q, V)
 }
 \arguments{
-\item{Q}{volumetric flow rate}
+\item{Q}{volumetric flow rate (m3/s)}
 
-\item{V}{fluid velocity}
+\item{V}{fluid velocity (m/s)}
 }
 \value{
 the diameter of the conduit through wich the fluid will flow

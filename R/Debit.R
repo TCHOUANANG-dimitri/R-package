@@ -5,9 +5,9 @@
 #' Calculate the flow rate of fluid flowing in a pipe.
 #'
 #' @param Re Reynolds number
-#' @param rho fluid density
-#' @param nu dynamic viscosity
-#' @param D caracteristic length
+#' @param rho fluid density (kg/m3)
+#' @param nu dynamic viscosity (Pa.s)
+#' @param D caracteristic length (m)
 #'
 #'
 #' @returns The fluid flow
@@ -35,3 +35,4 @@ flow <- function(Re,rho,nu,D){
   }
   return((pi*D*Re*(nu/rho))/4)
 }
+

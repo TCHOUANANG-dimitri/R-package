@@ -5,21 +5,22 @@
 #'Determine the overall pressure losses by summing the linear and singular losses
 #'
 #'@param Re Reynolds number
-#'@param L pipe length
-#'@param D pipe diameter
-#'@param V fluid velocity
+#'@param L pipe length (m)
+#'@param D pipe diameter (m)
+#'@param V fluid velocity (m/s)
 #'@param K singular losses coefficient
+#'@param rho density of the fluid (kg/m3)
 #'
 #'@return The overall pressure losses
 #'
 #'@examples
 #'
-#'losses(3000,10,0.010,5,0.1)
+#'losses(3000,10,0.010,5,0.1,1000)
 #'Enter the roughness of the conduit: 0.2
 #'enter the pipe diameter: 0.010
 #'23.43854
 #'
-losses <- function(Re,L,D,V,K){
+losses <- function(Re,L,D,V,K,rho){
   if(!is.numeric(Re)|| Re<=0||length(Re)!=1){
     stop("The Reynolds number 'Re' must be a strictly positive number !")
   }

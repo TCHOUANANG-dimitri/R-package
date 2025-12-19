@@ -26,9 +26,9 @@ f<- function(Re){
   if(Re<=2500){
     f <- 64/Re
   }else{
-    eps <- as.numeric(readline("Enter the roughness of the conduit: "))
-    D <- as.numeric(readline("enter the pipe diameter: "))
-    f <- 0.25/(log((eps/3.7*D)+(5.74/Re^0.9)))^2
+    eps <- as.numeric(readline("Enter the roughness of the conduit (in meter) : "))
+    D <- as.numeric(readline("enter the pipe diameter (in meter) : "))
+    f <- 0.25/(log10((eps/3.7*D)+(5.74/Re^0.9)))^2
   }
   return(f)
 }

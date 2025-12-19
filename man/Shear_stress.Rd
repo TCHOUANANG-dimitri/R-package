@@ -9,13 +9,13 @@ Shear_stress(Re, L, D, V, rho)
 \arguments{
 \item{Re}{Reynolds number}
 
-\item{L}{pipe length}
+\item{L}{pipe length (m)}
 
-\item{D}{pipe diameter}
+\item{D}{pipe diameter (m)}
 
-\item{V}{fluid velocity}
+\item{V}{fluid velocity (m/s)}
 
-\item{rho}{density}
+\item{rho}{density (kg/m3)}
 }
 \value{
 the shear stress value
